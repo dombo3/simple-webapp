@@ -1,5 +1,5 @@
-import { readFileSync, writeFileSync } from "fs";
-import express from "express";
+const { readFileSync, writeFileSync } = require("fs");
+const express = require("express");
 
 const app = express();
 

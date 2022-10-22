@@ -4,10 +4,10 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  const count = readFileSync("./count.txt");
+  const count = readFileSync(`${__dirname}/count.txt`);
   console.log("count: ", parseInt(count));
   const newCount = parseInt(count) + 1;
-  writeFileSync(`./count.txt`, String(newCount));
+  writeFileSync(`${__dirname}/count.txt`, String(newCount));
 
   res.send(`
   <!DOCTYPE html>
